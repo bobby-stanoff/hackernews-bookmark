@@ -1,0 +1,34 @@
+#bookmark-menu {
+    box-sizing: border-box;
+    height: 600px;
+    max-height: 90%;
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 5px;
+    background-color: #f6f6ef;
+    overflow: auto;
+}
+.bookmark-menu-title{
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #828282;
+    margin-bottom: 0.5rem;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* display: block; */
+    z-index: 1000;
+}
+.hidden {
+  display: none;
+}
+.closebutton{
+  font-size: 9pt;
+  float: right;
+}

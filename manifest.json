@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "HackerNews bookmark",
+  "description": "Add in-site bookmark tab for Hacker News, bookmark discussion, post for later",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css":["style.css"],
+      "matches": [
+        "https://news.ycombinator.com/*"
+      ]
+    }
+  ]
+}
