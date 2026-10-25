@@ -5,7 +5,6 @@ let bookmarks = JSON.parse(localStorage.getItem(BOOKMARK_STORAGE_KEY) || '{}');
 function StoreBookmark(postId, url, title, user){
     bookmarks[postId] = {url,title,user};
     localStorage.setItem(BOOKMARK_STORAGE_KEY,JSON.stringify(bookmarks));
-    console.log(JSON.stringify(bookmarks));
 }
 function RemoveBookmark(postId){
     delete bookmarks[postId];
@@ -35,6 +34,9 @@ function GenerateBookmarkButton() {
 }
 function GenereateBookmarkTab(){
     let pagetop = document.querySelector(".pagetop");
+    if(pagetop == null){
+        return;
+    }
     let bookmarkTabEl = document.createElement('a');
     bookmarkTabEl.textContent = 'bookmark';
     bookmarkTabEl.href = "javascript:;";
